@@ -1,0 +1,256 @@
+.nav {
+   position: fixed;
+   margin: 2rem 2rem;
+   
+   
+   &__links {
+       font-size: 4rem;
+       list-style: none;
+       display: flex;
+       flex-direction: column;
+       align-items:  center;  
+       padding: 0;      
+       
+ 
+   }
+    &__logo {
+        width: 8rem;
+         margin-bottom: 15vh;
+    }
+
+   &__link {
+    color: $color-secondary;
+     margin-bottom: 3rem;
+     position: relative;    
+   }
+
+}
+
+.kooltip {
+    position: relative;
+    
+}
+.tip {
+    visibility: hidden;
+    font-size: 1.9rem;
+    width: 10rem;
+    background-color: $color-secondary;
+    color: $color-white;
+    text-align: center;
+    border-radius: .4rem;
+    padding: .3rem .3rem;
+    position: absolute;
+    left: 9rem;
+    top:1rem;
+    opacity: 0;
+    transition: opacity .3s;
+    z-index: 10000;  
+
+}
+.tip.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 10000; 
+}
+
+.tip::after {
+    content: "";
+    position: absolute;
+    top:100%;
+    left: 25%;
+    margin-left: -4px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: $color-secondary;
+}
+
+/* CUSTOM NAV TOGGLER */
+.bars {
+    width: 3.5rem;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: .4s ease;
+
+
+
+    &__second {
+      background-color: $color-white;
+    }
+}
+
+.change1 {
+   transform: rotate(-45deg) translate(-9px, 6px);
+   @media only screen and (max-width:$bp-small-3) {
+    transform: rotate(-45deg) translate(-6px, 5px);
+ }
+}
+.change3 {
+   transform: rotate(45deg) translate(-8px, -8px);
+   @media only screen and (max-width:$bp-small-3) {
+    transform: rotate(45deg) translate(-10px, -10px);
+ }
+   
+}
+.change2 {
+   opacity: 0;
+} 
+
+
+
+/* SECOND NAV START */
+.navigation {
+    display: none;
+}
+@media only screen and (max-width:$bp-medium) {
+  
+  
+
+/* SECOND NAV  */
+.navigation {
+    opacity: 0;
+    transition: all .5s linear; 
+    display: block;
+ 
+   &__checkbox {
+      display: none;
+ 
+   }
+ 
+   &__icon {
+     position: fixed;
+     top: 7.1rem;
+     left: 7.7rem;
+     @media only screen and (max-width:$bp-small) {
+      top: 6.8rem;
+    }
+       
+   }
+   &__button {
+        background-color: $color-secondary;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        left: 6rem;
+        border-radius: 1rem;
+        z-index: 2000;
+        cursor: pointer;
+ 
+     
+   }
+ 
+   &__background {
+       height: 6rem;
+       width: 6rem;
+       /* border-radius: 50% */;
+       position: fixed;
+       top:6.5rem;
+       left: 6.5rem;
+       background-image: radial-gradient($color-primary, $color-primary-dark);
+       z-index: 1000;
+       transition: all .8s ease-in-out;
+   
+ 
+       &--onClick {
+        transform: scale(60);  
+            
+       }
+      
+       
+ 
+   }
+ 
+   &__nav {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1500;
+      opacity: 0;
+      width: 0;
+      transition: all .5s ease-in-out;
+ 
+      &--onClick {
+        opacity: 1;
+        width: 100%;
+      }
+   }
+ 
+   &__list {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-60%,-60%);
+     list-style: none;
+     text-align: center;
+      }
+   
+   &__item {
+       margin: 1.5rem;
+       position: relative;
+    
+       &--icon {
+        color: $color-secondary;
+        position: absolute;
+        top: 1rem;
+        left: -5rem;
+        
+       
+      }
+   }
+ 
+   &__logo {
+     margin-bottom: 5rem;
+    &--img {
+        width: 10rem;
+    }
+   }
+ 
+   &__link {
+     &:link,
+     &:visited {
+       font-size: 3.5rem;
+       font-weight: 400;
+       color: $color-white;
+       text-decoration: none;
+       text-transform: capitalize;
+       transition: all .5s linear;
+ 
+   
+ 
+     }
+   
+      &:hover {
+       color: $color-secondary
+      }
+      &:hover ~.underline {
+        opacity: 1;
+      }
+ 
+   }
+ }
+ 
+ 
+ .showSecondNav {
+    opacity: 1;
+ }
+} 
+
+.underline {
+  width: 5rem;
+  height: .3rem;
+  background: $color-secondary;
+  margin: .5rem auto;
+  opacity:0;
+  transition: all .5s linear;
+}
+.nav-link:hover ~.underline {
+    opacity: 1;
+}
+
+
+
+
+

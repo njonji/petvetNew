@@ -1,0 +1,212 @@
+.home {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
+  background:linear-gradient(rgba($color-primary,.5), rgba($color-primary,.5)), url("/assets/img/layout/homeXL.png")center/cover fixed no-repeat;
+
+  @media only screen and (max-width:$bp-large) {
+    background:linear-gradient(rgba($color-primary,.5), rgba($color-primary,.5)), url("/assets/img/layout/homeM.png")center/cover fixed no-repeat;
+
+     }
+  @media only screen and (max-width:$bp-small) {
+    background:linear-gradient(rgba($color-primary,.5), rgba($color-primary,.5)), url("/assets/img/layout/homeXS.png")center/cover fixed no-repeat;
+
+     }
+  
+
+  
+    &__content {
+        grid-row: 1 / -1;
+        grid-column: 6 / 12;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        
+        
+       
+        @media only screen and (max-width:$bp-wide-3) {
+            grid-row: 1 / -1;
+            grid-column: 2 / 12;
+            margin-top: 10rem;
+            
+        }
+    
+
+        &--logo {
+            width: 35rem;
+            margin: 20rem 0 2rem 0;
+            animation-name: moveInLeft;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            @media only screen and (max-width:$bp-wide-3) {
+                margin: 5rem 0 1rem 0;
+                 
+            }
+            @media only screen and (max-width:$bp-small-3) {
+                width: 30rem;   
+            }
+        }
+
+        &--text {
+        color: $color-white;
+        font-size: 2.3rem;
+        font-weight: 700;
+        letter-spacing: 1.5rem;
+        text-align: center;
+        margin: 3rem 0 3rem 0;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        @media only screen and (max-width:$bp-wide-3) {
+            font-size: 2rem;
+            margin: 1.5rem 0 2rem 0;
+            
+          }
+
+          @media only screen and (max-width:$bp-small-3) {
+            font-size: 1.9rem;   
+        }
+        }  
+    }
+    &__vrijeme {
+       
+        grid-row: 1 / -1;
+        grid-column: 2 / 5;
+        align-self: center;
+        text-align: center;
+        font-size: 2rem;
+        color: $color-text;
+        animation-name: moveInBottom;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        padding: 3rem;
+        border: 1px solid $color-primary-dark;
+        background:linear-gradient(rgba($color-white,.6), rgba($color-white,.6));
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--fade {
+            animation-name: fade;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+           
+        }
+
+     
+        @media only screen and (max-width:$bp-small-3) {
+            font-size: 1.8rem;   
+        }
+
+        &--h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+
+            @media only screen and (max-width:$bp-small-3) {
+                font-size: 2rem;   
+            }
+        }
+    }
+    &__visual {
+        grid-row: 1 / -1;
+        grid-column: 6 / 12;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        margin-bottom: -45rem;
+        @media only screen and (max-width:$bp-wide-3) {
+            grid-row: 1 / -1;
+            grid-column: 2 / 12;
+           
+            
+        }
+        @media only screen and (max-width:$bp-small) {    
+            margin-bottom: -30rem;
+            
+        }
+
+        &--img {
+            width: 30rem;
+            animation-name: moveInBottom;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            transition: all 8s ease-in-out;
+            z-index: 10;
+            @media only screen and (max-width:$bp-small) {
+              width: 25rem;
+                
+            }
+        
+            
+            &:hover {
+                transform: rotate(360deg);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__info {
+        display: none;
+        background: $color-secondary;
+        color: $color-white;
+        padding: 2rem;
+        border-radius: 3rem;
+        width: 30rem;
+        margin: 0;
+        clip-path: circle(15% at 17% 75%); 
+        transition: all .4s ease-in-out;
+        cursor: pointer;
+        text-align: center;
+
+        @media only screen and (max-width:$bp-medium) {
+            display: block;
+            position: absolute;
+            top: 75%;
+            left: 45%;
+            
+         }
+        @media only screen and (max-width:$bp-small-2) { 
+            left: 42%;     
+         }
+        @media only screen and (max-width:$bp-small-4) { 
+            left: 41%;     
+         }
+        
+
+        &:hover {
+            clip-path: circle(75%);
+            background: $color-primary;            
+        }
+        &:hover .home__info--icon {
+            opacity: 0;
+        }
+        &:hover .home__info--h1 {
+            opacity: 1;
+        }
+
+        &--h1 {
+            opacity: 0;
+        }
+
+        &--span {
+            position: relative;
+            margin-right: -4%;
+            transition: all .5s ease-in-out;
+        
+        }
+    
+        &--icon {
+            font-size: 3.5rem;
+             float: left;
+             padding-left:2.5rem;
+             padding-bottom: 2rem;
+            
+             }
+        
+            
+        
+    }
+
+   
+}

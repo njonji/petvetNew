@@ -1,0 +1,116 @@
+.about {
+    display: grid;
+    grid-template-rows: 10rem 80rem;
+    grid-template-columns: repeat(12, 1fr);
+
+    @media only screen and (max-width:$bp-wide-3) {
+      grid-template-rows: 10rem 60rem 60rem;
+      
+    }
+
+
+
+    &__title {
+      grid-row: 1 / 2;
+      grid-column: 2 / 12;
+      text-align: center;
+    }
+    
+
+    &__image {
+        grid-row: 2 / 3;
+        grid-column: 6 / -1;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        width: 70%;
+        border: 2px solid $color-primary-dark;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        @media only screen and (max-width:$bp-huge-2) {
+          width: 75%;
+        }
+        @media only screen and (max-width:$bp-wide-2) {
+          width: 85%;
+        }
+        @media only screen and (max-width:$bp-wide-3) {
+          grid-row: 2 / 3;
+          grid-column: 2 / 12;
+          width: 60%;
+          
+        }
+        @media only screen and (max-width:$bp-wide-3) {
+         width: 70%;
+          
+        }
+        @media only screen and (max-width:$bp-large) {
+         width: 80%;
+          
+        }
+        @media only screen and (max-width:$bp-small-2) {  
+          margin-top: -10rem;
+        }
+        @media only screen and (max-width:$bp-small-4) {
+          margin-top: -15rem;
+        }
+   
+    }
+
+    &__text {
+        grid-row: 2 / 3;
+        grid-column: 2 / 6;
+        color: $color-primary-dark;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+        
+        @media only screen and (max-width:$bp-wide-3) {
+          grid-row: 3 / -1;
+          grid-column: 2 / 12;
+           
+         }
+         @media only screen and (max-width:$bp-small) {    
+           margin-top: -20rem;
+         }
+  
+         @media only screen and (max-width:$bp-small-4) {
+          margin-top: -25rem;
+           padding: 0 2rem;
+         }
+      
+        
+    
+
+        &--p {
+            font-size: 1.9rem;
+            text-align: center;
+            padding: 0 2rem;
+            letter-spacing: 0.1rem;
+            @media only screen and (max-width:$bp-small) {
+               font-size: 1.7rem;
+             }
+          
+            
+        }
+       &--osoblje {
+           display: flex;
+           margin: 1rem 0;
+
+       }
+    
+
+        &--emir {
+            width: 15rem;
+            border-radius: 50%;
+            margin: 1rem 4rem;
+            border: 1px solid $color-primary-dark;
+        
+        }
+       &--nerko {
+        width: 15rem;
+        border-radius: 50%; 
+        margin: 1rem 4rem;
+        border: 1px solid $color-primary-dark;
+       }
+    }
+}

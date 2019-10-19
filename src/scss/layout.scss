@@ -1,0 +1,61 @@
+#sidenav {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    background-color: $color-primary-dark;
+
+    @media only screen and (max-width:$bp-medium) {
+        display: none;
+     }
+
+}
+
+#home {
+    
+    grid-row: 1 / 2;
+    grid-column: 2 / -1;
+    @media only screen and (max-width:$bp-medium) {
+        grid-column: 1 / -1;
+     }
+}
+#about {
+    grid-row: 2 / 3;
+    grid-column: 2 / -1;
+    margin:10rem 0;
+        @media only screen and (max-width:$bp-medium) {
+        grid-column: 1 / -1;
+     }
+}
+#work {
+    grid-row: 3 / 4;
+    grid-column: 2 / -1;
+    
+        @media only screen and (max-width:$bp-medium) {
+        grid-column: 1 / -1;
+     }
+}
+#stats {
+    grid-row: 4 / 5;
+    grid-column: 2 / -1;
+    
+        @media only screen and (max-width:$bp-medium) {
+        grid-column: 1 / -1;
+     }
+}
+
+#lokacija {
+    grid-row: 5 / 6;
+    grid-column: 2 / -1;
+    
+        @media only screen and (max-width:$bp-medium) {
+        grid-column: 1 / -1;
+     }
+}
+
+#footer {
+    grid-row: 6 / -1;
+    grid-column: 2 / -1;
+    
+        @media only screen and (max-width:$bp-medium) {
+        grid-column: 1 / -1;
+     }
+}

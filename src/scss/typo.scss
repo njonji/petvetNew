@@ -1,0 +1,129 @@
+.title__underline {
+    width: 10rem;
+    height: .3rem;
+    background: $color-primary;
+    margin: .5rem auto;
+    transition: all .5s linear;
+    &--small {
+        height: .2rem;
+        width: 7rem;
+    }
+    &--footer {
+        margin-bottom: 1rem;
+    }
+
+  }
+
+  .customBtn {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-white;
+    background: $color-secondary;
+    display: inline-block;
+    padding: .5rem 1rem;
+    border: 2px solid $color-secondary;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+
+    @media only screen and (max-width:$bp-small-3) {
+        font-size: 1.7rem;   
+    }
+    
+    &:hover {
+        text-decoration: none;
+        background: $color-primary;
+        border: 2px solid $color-primary;
+        color: $color-white;
+        cursor: pointer;
+    }
+
+    &__footer {
+        font-size: 1.4rem;
+        background: white;
+        color: $color-primary;
+        border: 2px solid $color-primary;
+        @media only screen and (max-width:$bp-small-3) {
+            padding: .2rem .5rem; 
+        }
+
+        &:hover {
+            background: $color-secondary;
+            color: white;
+            border: 2px solid $color-secondary;
+        }
+    }
+
+    &__home {
+        animation-name: moveInBottom;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        z-index: 199;
+        
+    }
+    &__work {
+        background: $color-secondary;
+        color: $color-white;
+        height: 4rem;
+
+        &:hover {
+            background: $color-primary-dark;
+            color: $color-white !important;
+            border: 2px solid $color-primary-dark; 
+        }
+    }
+  }
+
+  .heading-primary{
+    color: $color-grey-light;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 4rem;
+   
+    
+
+    &--main{
+        display: block;
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: 2rem;
+        color:$color-primary-dark;
+    
+        animation-name: moveInLeft;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+        position: relative;
+        @media only screen and (max-width:$bp-small) {
+            font-size: 3rem;
+          }
+
+          &--usluge {
+              font-size: 3rem;
+          }
+    
+
+        &-2{
+            color:$color-secondary;
+            display: inline;
+        }
+    
+    }
+    
+    &--sub{
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 1.6rem;
+        animation-name: moveInRight;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+        @media only screen and (max-width:$bp-small) {
+            font-size: 1.4rem;
+          }
+    
+    
+    }
+
+}
